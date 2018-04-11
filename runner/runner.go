@@ -213,7 +213,7 @@ func (r *Runner) Run() error {
 
 	log.Printf("Waiting for exitcode")
 	if err := <-errs; err != nil {
-		log.Printf("Error from ch: %#v", err)
+		log.Printf("Error from ch: %s", err.Error())
 		cancel()
 		return err
 	}
